@@ -8,4 +8,4 @@ RUN \
      apk add --no-cache ca-certificates 'curl>7.61.0' && \
      chmod +x /usr/bin/minio-operator
 
-CMD ["minio-operator"]
+CMD ["minio-operator", "-image", "mesosphere/kubeaddons-minio"]

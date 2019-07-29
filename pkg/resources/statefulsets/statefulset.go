@@ -113,7 +113,7 @@ func volumeMounts(mi *miniov1beta1.MinIOInstance) []corev1.VolumeMount {
 	if mi.RequiresSSLSetup() {
 		mounts = append(mounts, corev1.VolumeMount{
 			Name:      mi.Name + "-tls",
-			MountPath: "/root/.minio/certs",
+			MountPath: "/tmp/certs",
 		})
 	}
 
